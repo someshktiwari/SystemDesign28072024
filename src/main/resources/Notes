@@ -1,0 +1,20 @@
+GUI - Mac and Windows
+Features - buttons and checkboxes
+
+We will design both features(products) first
+1. Buttons
+2. Checkboxes
+
+We will design interfaces for both and created classes for windows and mac
+
+Now we will create Abstract Factory(GUI factory) -
+
+GUI factory produces -
+1. Buttons using createButton method
+2. Checkboxes using createCheckbox method
+
+Both Windows and Mac Classes will use GUIFactory interface
+
+Both WindowsFactory and MacFactory are Concrete Factories where GUIFactory is Abstract Factory that provides blueprint.
+
+Application(Client Code) - Users don't care what factory method they use since they work through abstract interfaces
