@@ -1,3 +1,5 @@
+package AbstractFactory;
+
 public class Main {
 
     private static Application configureApplication() {

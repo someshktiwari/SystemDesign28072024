@@ -1,0 +1,37 @@
+### Observer Design Pattern Question
+
+Design a stock market monitoring system where various investor applications need to be notified whenever there is a change
+in stock prices. The system should allow investors to subscribe to updates for specific stocks and receive notifications
+when the prices of those stocks change. Define the necessary components and interactions using the Observer design pattern.
+
+Components of Observer Pattern -
+Publisher - The object that has state and notifies other object when state changes. Also called Subject.
+Subscriber - The object that want to track changes and get notified. Also called Observers.
+State - The data or condition of the subject that observers are interested in and get notified about when it changes.
+
+The components of the Observer design pattern are:
+
+Subject: The object that holds the state and notifies observers of changes. Also called Publisher.
+Observer: The interface or abstract class for objects that should be notified of changes in the subject.
+          Also called Subscriber.
+Concrete Subject: The concrete implementation of the subject that maintains the state and notifies observers.
+Concrete Observer: The concrete implementation of the observer that reacts to updates from the subject.
+
+In the above example Publisher would be Stock Market Monitoring System -
+
+Let's create a interface StockMarket -
+    Methods - subscribe, unsubscribe, notify, setStockData
+
+Next we will create the Subscriber i.e. Investor interface
+    Method - update
+
+Publisher concrete class - StockMarketConcrete
+    Attributes - stockPrice, investors list
+    Constructor to initialize stockPrice
+    Methods from interface
+Subscriber concrete class - InvestorConcrete
+    Attributes - name
+    Constructor to provide name
+    Methods from interface
+
+Main class to run and verify the implementation

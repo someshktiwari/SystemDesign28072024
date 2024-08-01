@@ -1,3 +1,5 @@
+package AbstractFactory;
+
 public class MacOSFactory implements GUIFactory {
     @Override
     public Button createButton() {

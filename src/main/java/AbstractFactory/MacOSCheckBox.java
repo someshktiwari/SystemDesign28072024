@@ -1,3 +1,5 @@
+package AbstractFactory;
+
 public class MacOSCheckBox implements CheckBox {
     @Override
     public void print(){
