@@ -35,3 +35,13 @@ Subscriber concrete class - InvestorConcrete
     Methods from interface
 
 Main class to run and verify the implementation
+
+New Requirement -
+
+Can we make it like there are various tickers and when a particular stock reaches a particular value, only then we send
+the notification?
+
+For the above requirement I made changes in the InvestorConcrete.
+
+I added one more attribute thresholdStockPrice and updated the update() method to send the notification at when reaches
+or cross a particular value.

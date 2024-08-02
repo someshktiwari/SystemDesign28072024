@@ -6,4 +6,5 @@ public interface StockMarket {
     public void unsubscribeInvestor(Investor investor);
     public void notifyInvestors();
     public void setStockPrice(double stockPrice);
+
 }
