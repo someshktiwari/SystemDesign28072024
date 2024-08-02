@@ -1,18 +1,19 @@
 package ObserverPattern;
+import java.util.*;
 
 public class InvestorConcrete implements Investor{
     private String name;
-    private double thresholdStockValue;
+    private Map<String, Double> stockThresholds = new HashMap<>();
 
-    public InvestorConcrete(String name, double thresholdStockValue) {
+    public InvestorConcrete(String name, Map<String, Double> stockThresholds) {
         this.name = name;
-        this.thresholdStockValue = thresholdStockValue;
+        this.stockThresholds.putAll(stockThresholds);
     }
 
     @Override
-    public void update(double price) {
-        if (price >= thresholdStockValue) {
-            System.out.println("Hi " +name + ", your stock has crossed the threshold value of " + thresholdStockValue);
+    public void update(String stockTicker,double price) {
+        if (stockThresholds.containsKey(stockTicker) && price >= stockThresholds.get(stockTicker)) {
+            System.out.println(name + " has received an update for " + stockTicker + ". Stock price: " + price);
         }
     }
 }

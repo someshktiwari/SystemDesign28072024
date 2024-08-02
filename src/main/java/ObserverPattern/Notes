@@ -41,7 +41,18 @@ New Requirement -
 Can we make it like there are various tickers and when a particular stock reaches a particular value, only then we send
 the notification?
 
-For the above requirement I made changes in the InvestorConcrete.
+For the above requirement I made following changes -
 
-I added one more attribute thresholdStockPrice and updated the update() method to send the notification at when reaches
-or cross a particular value.
+StockMarket Interface: Updated setStockPrice to accept a stock ticker and its price.
+
+Investor Interface: Updated update method to handle stock tickers and their prices.
+
+StockMarketConcrete:
+
+Used a Map to store multiple stock prices.
+Updated notifyInvestors to pass stock ticker and price to each investor.
+Modified setStockPrice to handle specific stocks.
+InvestorConcrete:
+
+Used a Map to track multiple stocks and their thresholds.
+Updated update method to check if the price of the specific stock meets the investor’s threshold.
