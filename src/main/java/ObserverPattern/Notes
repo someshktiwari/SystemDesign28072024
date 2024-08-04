@@ -56,3 +56,5 @@ InvestorConcrete:
 
 Used a Map to track multiple stocks and their thresholds.
 Updated update method to check if the price of the specific stock meets the investor’s threshold.
+
+Created a random stock price generator to remove the hardcoded stock value. StockPriceGenerator.java
